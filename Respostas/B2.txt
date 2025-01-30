@@ -1,0 +1,4 @@
+OK 2. Criar um comando SELECT que retorne o nome do cliente e o nome da cidade de todos os registros.
+  select a.nome as cliente, b.nome as cidade
+  from clientes a
+  left join cidades b on b.codigo_cidade = a.codigo_cidade

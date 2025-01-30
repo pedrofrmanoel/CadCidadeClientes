@@ -1,0 +1,23 @@
+C - LÓGICA DE PROGRAMAÇÃO
+1. Monte um arquivo texto com um algoritmo, passo a passo, para troca de um pneu de carro que furou.
+
+01    Parar o carro
+02    Acionar o pisca-alerta
+03    Descer do carro
+04    Pegar o triangulo do veiculo
+05    Sinalizar a via 
+06    Pegar o macaco e posicionar 
+07    Pegar a chave de roda
+08    Afrouxar os parafusos 
+09    Erguer o carro 
+10    Soltar os parafusos
+11    Remover o pneu furado
+12    Colocar o estepe
+13    Colocar os parafusos
+14    Baixar o carro  
+15    Apertar o parafuso
+16    Guardar o pneu furado
+17    Guardar o macaco
+18    Guardar o triangulo
+19    Lavar a mão se conseguir
+20    Seguir viagem 

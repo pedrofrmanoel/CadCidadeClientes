@@ -1,0 +1,3 @@
+OK 6. Criar um comando INSERT na tabela de clientes de um registro qualquer com todos os campos da tabela. (valores livres) Requisitos extras:
+  INSERT INTO clientes (cgc_cpf_cliente, nome, telefone, cep, endereco, bairro, complemento, e_mail, codigo_cidade) VALUES
+  ('520.134.440-28', 'João Pedro Manoel', '(14)11111-1111', '17600-001', 'Avenida Tamoios, 123', 'Centro', 'Apto 101', 'joaopedro@email.com', 3555000);

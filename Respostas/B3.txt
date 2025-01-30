@@ -1,0 +1,4 @@
+OK 3. Criar um comando SELECT que retorne TODOS os nomes e os códigos dos clientes ordenados por nome do cliente.
+  select a.nome, a.codigo_cliente
+  from clientes a
+  order by a.nome

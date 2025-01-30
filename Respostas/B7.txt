@@ -1,0 +1,9 @@
+OK 7. Criar uma view para consultar os registros contidos na tabela CIDADES. (Criar um arquivo separado)
+  CREATE VIEW vw_cidades AS  
+  SELECT  
+    codigo_cidade,  
+    nome,  
+    estado,  
+    cep_inicial,  
+    cep_final  
+  FROM cidades;
