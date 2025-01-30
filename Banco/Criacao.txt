@@ -1,0 +1,180 @@
+CREATE TABLE cidades (
+    codigo_cidade INT PRIMARY KEY, -- Campo chave primária com incremento automático
+    nome NVARCHAR(100) NOT NULL,                -- Nome da cidade
+    estado NVARCHAR(2) NOT NULL,                -- Sigla do estado (ex: SP, RJ)
+    cep_inicial CHAR(9) NOT NULL,               -- CEP inicial (formato fixo de 8 caracteres)
+    cep_final CHAR(9) NOT NULL                  -- CEP final (formato fixo de 8 caracteres)
+);
+
+create table clientes (
+    codigo_cliente int primary key identity(1,1), -- chave primária com incremento automático
+    cgc_cpf_cliente nvarchar(20) not null,        -- campo para cpf ou cnpj (20 caracteres para ambos formatos)
+    nome nvarchar(150) not null,                 -- nome do cliente
+    telefone nvarchar(15),                       -- telefone do cliente (aceita formatos variados)
+    cep nvarchar(9),                             -- cep
+    endereco nvarchar(200),                      -- endereço completo
+    bairro nvarchar(100),                        -- bairro
+    complemento nvarchar(100),                   -- complemento do endereço
+    e_mail nvarchar(150),                        -- e-mail do cliente
+    codigo_cidade int not null,                  -- relacionamento com a tabela de cidades
+    constraint fk_cidade foreign key (codigo_cidade) references cidades(codigo_cidade) -- chave estrangeira
+);
+
+
+INSERT INTO cidades (codigo_cidade, nome, estado, cep_inicial, cep_final) VALUES
+(3550308, 'São Paulo', 'SP', '01000-000', '05999-999'),
+(3509502, 'Campinas', 'SP', '13000-000', '13149-999'),
+(3543402, 'Ribeirão Preto', 'SP', '14000-000', '14119-999'),
+(3548500, 'Santos', 'SP', '11000-000', '11299-999'),
+(3552205, 'Sorocaba', 'SP', '18000-000', '18119-999'),
+(3304557, 'Rio de Janeiro', 'RJ', '20000-000', '23799-999'),
+(3303302, 'Niterói', 'RJ', '24000-000', '24399-999'),
+(3303906, 'Petrópolis', 'RJ', '25600-000', '25799-999'),
+(3303500, 'Nova Iguaçu', 'RJ', '26000-000', '26299-999'),
+(3301009, 'Campos dos Goytacazes', 'RJ', '28000-000', '28119-999'),
+(3106200, 'Belo Horizonte', 'MG', '30000-000', '31999-999'),
+(3170206, 'Uberlândia', 'MG', '38400-000', '38429-999'),
+(3118601, 'Contagem', 'MG', '32000-000', '32399-999'),
+(3136702, 'Juiz de Fora', 'MG', '36000-000', '36199-999'),
+(3143302, 'Montes Claros', 'MG', '39400-000', '39409-999'),
+(4314902, 'Porto Alegre', 'RS', '90000-000', '91999-999'),
+(4305108, 'Caxias do Sul', 'RS', '95000-000', '95119-999'),
+(4314407, 'Pelotas', 'RS', '96000-000', '96199-999'),
+(4304606, 'Canoas', 'RS', '92000-000', '92449-999'),
+(4316907, 'Santa Maria', 'RS', '97000-000', '97099-999'),
+(2927408, 'Salvador', 'BA', '40000-000', '42499-999'),
+(2910800, 'Feira de Santana', 'BA', '44000-000', '44099-999'),
+(2933307, 'Vitória da Conquista', 'BA', '45000-000', '45099-999'),
+(2914805, 'Itabuna', 'BA', '45600-000', '45609-999'),
+(2913600, 'Ilhéus', 'BA', '45650-000', '45659-999');
+
+create procedure inserircidade
+    @codigocidade integer,
+    @nome nvarchar(100),
+    @estado char(2),
+    @cepinicial nvarchar(10),
+    @cepfinal nvarchar(10)
+as
+begin
+    insert into cidades (codigo_cidade, nome, estado, cep_inicial, cep_final)
+    values (@codigocidade, @nome, @estado, @cepinicial, @cepfinal);
+end;
+go
+
+create procedure editarcidade
+    @codigocidade int,
+    @nome nvarchar(100),
+    @estado char(2),
+    @cepinicial nvarchar(10),
+    @cepfinal nvarchar(10)
+as
+begin
+    update cidades
+    set nome = @nome,
+        estado = @estado,
+        cep_inicial = @cepinicial,
+        cep_final = @cepfinal
+    where codigo_cidade = @codigocidade;
+
+end;
+go
+
+create procedure excluircidade
+    @codigocidade int
+as
+begin
+    delete from cidades  where codigo_cidade = @codigocidade;
+end;
+go
+
+
+create procedure inserircliente
+    @cgc_cpf_cliente nvarchar(20),
+    @nome nvarchar(100),
+    @telefone nvarchar(20),
+    @cep nvarchar(9),
+    @endereco nvarchar(150),
+    @bairro nvarchar(100),
+    @complemento nvarchar(100),
+    @e_mail nvarchar(100),
+    @codigo_cidade int
+as
+begin
+    insert into clientes (cgc_cpf_cliente, nome, telefone, cep, endereco, bairro, complemento, e_mail, codigo_cidade)
+    values (@cgc_cpf_cliente, @nome, @telefone, @cep, @endereco, @bairro, @complemento, @e_mail, @codigo_cidade);
+end;
+go
+
+create procedure editarcliente
+    @codigo_cliente int,
+    @cgc_cpf_cliente nvarchar(20),
+    @nome nvarchar(100),
+    @telefone nvarchar(20),
+    @cep nvarchar(9),
+    @endereco nvarchar(150),
+    @bairro nvarchar(100),
+    @complemento nvarchar(100),
+    @e_mail nvarchar(100),
+    @codigo_cidade int
+as
+begin
+    update clientes
+    set cgc_cpf_cliente = @cgc_cpf_cliente,
+        nome = @nome,
+        telefone = @telefone,
+        cep =@cep
+        endereco = @endereco,
+        bairro = @bairro,
+        complemento = @complemento,
+        e_mail = @e_mail,
+        codigo_cidade = @codigo_cidade
+    where codigo_cliente = @codigo_cliente;
+end;
+go
+
+
+create procedure excluircliente
+    @codigo_cliente int
+as
+begin
+    delete from clientes
+    where codigo_cliente = @codigo_cliente;
+end;
+go
+
+
+CREATE PROCEDURE GerenciarCidade
+    @Acao NVARCHAR(10), -- 'INSERIR', 'EDITAR' ou 'EXCLUIR'
+    @CodigoCidade INT,
+    @Nome NVARCHAR(100) = NULL,
+    @Estado CHAR(2) = NULL,
+    @CepInicial NVARCHAR(10) = NULL,
+    @CepFinal NVARCHAR(10) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF @Acao = 'INSERIR'
+    BEGIN
+        INSERT INTO cidades (codigo_cidade, nome, estado, cep_inicial, cep_final)
+        VALUES (@CodigoCidade, @Nome, @Estado, @CepInicial, @CepFinal);
+    END
+    ELSE IF @Acao = 'EDITAR'
+    BEGIN
+        UPDATE cidades
+        SET nome = @Nome,
+            estado = @Estado,
+            cep_inicial = @CepInicial,
+            cep_final = @CepFinal
+        WHERE codigo_cidade = @CodigoCidade;
+    END
+    ELSE IF @Acao = 'EXCLUIR'
+    BEGIN
+        DELETE FROM cidades WHERE codigo_cidade = @CodigoCidade;
+    END
+    ELSE
+    BEGIN
+        PRINT 'Ação inválida! Use INSERIR, EDITAR ou EXCLUIR.';
+    END
+END;
+GO
