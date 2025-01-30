@@ -66,6 +66,8 @@ begin
   if      cbOrdem.ItemIndex = 0 then sOrdem := 'codigo_cidade'
   else if cbOrdem.ItemIndex = 1 then sOrdem := 'nome';
 
+  if      cbOrdem.ItemIndex = 1 then sOrdem := 'estado, '+sOrdem;
+
   adoAux.Close;
   adoAux.SQL.Clear;
   adoAux.SQL.Add('select * from cidades order by '+sOrdem);

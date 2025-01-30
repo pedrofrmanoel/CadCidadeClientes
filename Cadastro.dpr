@@ -19,6 +19,5 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tdm, dm);
   Application.CreateForm(TfrmMenu, frmMenu);
-  Application.CreateForm(TfrmPesquisaClientes, frmPesquisaClientes);
   Application.Run;
 end.

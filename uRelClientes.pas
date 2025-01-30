@@ -102,8 +102,8 @@ begin
   if      cbOrdem.ItemIndex = 0 then sOrdem := 'a.codigo_cliente'
   else if cbOrdem.ItemIndex = 1 then sOrdem := 'a.nome';
 
-  if      cbAgrupar.ItemIndex = 1 then sOrdem := sOrdem+', b.estado'
-  else if cbAgrupar.ItemIndex = 2 then sOrdem := sOrdem+', b.nome';
+  if      cbAgrupar.ItemIndex = 1 then sOrdem := ' b.estado, '+sOrdem
+  else if cbAgrupar.ItemIndex = 2 then sOrdem := ' b.nome, '+sOrdem;
 
   if trim(edtCidade.Text) <> '' then sFiltro := sFiltro+' a.codigo_cidade = '+edtCidade.Text;
   if trim(edtCliente.Text)<> '' then sFiltro := sFiltro+ifthen(sFiltro = '','',' and ')+' a.codigo_cliente = '+edtCliente.Text;

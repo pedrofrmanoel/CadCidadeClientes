@@ -3,11 +3,10 @@ object dm: Tdm
   Height = 369
   Width = 422
   object conexao: TADOConnection
-    Connected = True
     ConnectionString = 
       'Provider=SQLNCLI11.1;Persist Security Info=False;User ID=sa;Init' +
       'ial Catalog=BANCO;Data Source=ASUS-NB\SQL2019;Initial File Name=' +
-      '"";Server SPN=""'
+      '"";Server SPN="";'
     Provider = 'SQLNCLI11.1'
     Left = 32
     Top = 16
