@@ -1,7 +1,7 @@
 # CadCidadeClientes
-Cadastro Cidade Clientes
+Cadastro Cidades e Clientes;
 
-Projeto simples feito em Delphi banco de dados SQLServer.
+Projeto feito em Delphi banco de dados SQLServer.
 
 Tela de Menu
 
