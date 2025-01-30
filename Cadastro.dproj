@@ -1,0 +1,187 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{12F30E7C-7574-4315-A764-D3E349E1F669}</ProjectGuid>
+			<ProjectVersion>13.4</ProjectVersion>
+			<FrameworkType>VCL</FrameworkType>
+			<MainSource>Cadastro.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>1</TargetedPlatforms>
+			<AppType>Application</AppType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<DCC_UsePackage>fmx;IndySystem;DBXInterBaseDriver;DataSnapCommon;DataSnapClient;DataSnapServer;DataSnapProviderClient;DbxCommonDriver;dbxcds;DBXOracleDriver;CustomIPTransport;dsnap;fmxase;IndyCore;inetdbxpress;bindcompfmx;rtl;dbrtl;DbxClientDriver;bindcomp;inetdb;xmlrtl;ibxpress;IndyProtocols;DBXMySQLDriver;bindengine;soaprtl;DBXInformixDriver;DBXFirebirdDriver;inet;fmxobj;DBXSybaseASADriver;fmxdae;dbexpress;DataSnapIndy10ServerTransport;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<DCC_UsePackage>TeeDB;vclib;DBXSybaseASEDriver;vclimg;vcldb;vcldsnap;DBXDb2Driver;vcl;DBXMSSQLDriver;webdsnap;adortl;Tee;DBXOdbcDriver;TeeUI;vclactnband;bindcompvcl;vclie;vcltouch;websnap;VclSmp;DataSnapConnectors;dsnapcon;vclx;$(DCC_UsePackage)</DCC_UsePackage>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<DCC_UsePackage>fsADO16;JvGlobus;ACBr_Convenio115;JvMM;JvManagedThreads;ACBr_LCDPR;ACBr_EDI;ACBr_GNRE;gbCob16;JvDlgs;JvCrypt;TeeDB;ACBr_Diversos;ACBr_NFeDanfeFR;ACBr_CIOT;frxTee16;Rave100VCL;vclib;inetdbbde;frxBDE16;ACBr_NFeDanfeESCPOS;JvNet;ACBre_Social;JvDotNetCtrls;DBXSybaseASEDriver;fsIBX16;ACBr_BlocoX;vclimg;QR5RunDXE2;ACBr_NF3e;fmi;ACBr_Comum;ACBr_NFSeDanfseFR;JvXPCtrls;ACBr_ONE;ACBr_BPeDabpeESCPOS;ACBr_MDFeDamdfeFR;vcldb;PkgPrtGrid;vcldsnap;ACBr_MDFeDamdfeRL;ACBr_SATExtratoESCPOS;DBXDb2Driver;Intraweb_120_160;frce;AGSistemas;ACBr_PagFor;JvCore;frxADO16;vclribbon;frxe16;ACBr_Serial;ACBr_SPED;ACBr_MDFe;vcl;ACBr_NFSeDanfseRL;ACBr_GNREGuiaRL;CloudService;DBXMSSQLDriver;CodeSiteExpressPkg;FmxTeeUI;ACBr_NF3eDANF3eESCPOS;fsTee16;tmsexdxe2;ACBr_Sintegra;JvAppFrm;tmsdxe2;JvDB;JvRuntimeDesign;ACBr_SAT;webdsnap;ACBr_NFSe;ACBr_CTeDacteFR;ACBr_Ponto;JclDeveloperTools;ACBr_LFD;ACBR_DeSTDA;JvDocking;adortl;JvWizards;ACBr_TCP;JvHMI;ACBr_SEF2;frxDBX16;ACBr_PAF;JvBands;vcldbx;ACBr_NFSeX;frx16;ACBr_PAFNFCe;JvPluginSystem;ACBr_MTER;Tee;ACBr_NFe;DBXOdbcDriver;ACBr_CTe;JvCmp;ExPackD7;ACBr_ANe;JvSystem;svnui;JvTimeFramework;JvControls;ACBr_NFCeECFVirtual;fsBDE16;intrawebdb_120_160;frxDB16;ACBr_NFeDanfeRL;fs16;TeeUI;FMXTee;vclactnband;JvJans;bindcompvcl;JvStdCtrls;JvCustom;Jcl;vclie;JvPageComps;JvPrintPreview;ACBr_OpenSSL;ACBr_BPe;tmsxlsdxe2;vcltouch;ACBr_TEFD;ACBr_Integrador;websnap;ACBr_Reinf;ACBr_CTeDacteRL;ACBr_ADRCST;ACBr_SATWS;VclSmp;ACBr_NFSeXDANFSeFR;fsDB16;ACBr_PIXCD;ZipMasterR;DataSnapConnectors;ACBr_SATExtratoRL;dclfrxTee16;ACBr_SATECFVirtual;dsnapcon;ACBr_NFSeXDanfseRL;JclVcl;JvPascalInterpreter;ACBr_SATExtratoFR;vclx;tmswizdxe2;ACBr_SPEDImportar;svn;bdertl;Tee8QR5D14;frxIBX16;JvBDE;$(DCC_UsePackage)</DCC_UsePackage>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<DCC_RemoteDebug>true</DCC_RemoteDebug>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<DCC_RemoteDebug>false</DCC_RemoteDebug>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="uMenu.pas">
+				<Form>frmMenu</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="uDM.pas">
+				<Form>dm</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="uCidades.pas">
+				<Form>frmCidades</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="uFuncoes.pas"/>
+			<DCCReference Include="uClientes.pas">
+				<Form>frmClientes</Form>
+			</DCCReference>
+			<DCCReference Include="uPesquisaCidades.pas">
+				<Form>frmPesquisaCidades</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="uRelCidades.pas">
+				<Form>RelCidades</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="uRelClientes.pas">
+				<Form>RelClientes</Form>
+			</DCCReference>
+			<DCCReference Include="uPesquisaClientes.pas">
+				<Form>frmPesquisaClientes</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\IndyCore160.bpl">Indy 10 Core</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\IndySystem160.bpl">Indy 10 System</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\IndyProtocols160.bpl">Indy 10 Protocols</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclIPIndyImpl160.bpl">IP Abstraction Indy Implementation Design Time</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\9.0\Bpl\tmsdedXE2.bpl">TMS Component Pack design time support</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\JclBaseExpert160.bpl">JCL Package containing common units for JCL Experts</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\JclDebugExpert160.bpl">JCL Debug IDE extension</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\JclProjectAnalysisExpert160.bpl">JCL Project Analyzer</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\JclFavoriteFoldersExpert160.bpl">JCL Open and Save IDE dialogs with favorite folders</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\JclRepositoryExpert160.bpl">JCL Package containing repository wizards</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\JclSIMDViewExpert160.bpl">JCL Debug Window of XMM registers</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\JclStackTraceViewerExpert160.bpl">JCL Stack Trace Viewer</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">Cadastro.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Deployment/>
+				<Platforms>
+					<Platform value="Win64">False</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>

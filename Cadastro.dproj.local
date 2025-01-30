@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/01/27 18:49:52.000.725,=C:\Users\Pedro\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/27 18:50:27.000.511,D:\Projetos_Pedro\Teste\Sinquia\Menu.pas=C:\Users\Pedro\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/01/27 18:50:27.000.511,D:\Projetos_Pedro\Teste\Sinquia\Menu.dfm=C:\Users\Pedro\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2025/01/27 18:50:40.000.635,D:\Projetos_Pedro\Teste\Sinquia\Cadastro.dproj=C:\Users\Pedro\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/01/27 18:50:55.000.739,=D:\Projetos_Pedro\Teste\Sinquia\Unit1.pas</Transaction>
+    <Transaction>2025/01/27 18:51:14.000.426,=D:\Projetos_Pedro\Teste\Sinquia\Unit1.pas</Transaction>
+    <Transaction>2025/01/27 18:51:28.000.026,D:\Projetos_Pedro\Teste\Sinquia\uDM.pas=D:\Projetos_Pedro\Teste\Sinquia\Unit1.pas</Transaction>
+    <Transaction>2025/01/27 18:51:28.000.026,D:\Projetos_Pedro\Teste\Sinquia\uDM.dfm=D:\Projetos_Pedro\Teste\Sinquia\Unit1.dfm</Transaction>
+    <Transaction>2025/01/27 18:51:38.000.459,D:\Projetos_Pedro\Teste\Sinquia\uMenu.dfm=D:\Projetos_Pedro\Teste\Sinquia\Menu.dfm</Transaction>
+    <Transaction>2025/01/27 18:51:38.000.459,D:\Projetos_Pedro\Teste\Sinquia\uMenu.pas=D:\Projetos_Pedro\Teste\Sinquia\Menu.pas</Transaction>
+    <Transaction>2025/01/28 07:51:09.000.553,=D:\Projetos_Pedro\Teste\Sinquia\Unit2.pas</Transaction>
+    <Transaction>2025/01/28 07:51:23.000.768,D:\Projetos_Pedro\Teste\Sinquia\Unit2.dfm=D:\Projetos_Pedro\Teste\Sinquia\uCidades.dfm</Transaction>
+    <Transaction>2025/01/28 07:51:23.000.768,D:\Projetos_Pedro\Teste\Sinquia\Unit2.pas=D:\Projetos_Pedro\Teste\Sinquia\uCidades.pas</Transaction>
+    <Transaction>2025/01/28 21:33:00.000.045,=D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas</Transaction>
+    <Transaction>2025/01/28 21:33:13.000.250,D:\Projetos_Pedro\Teste\Cadastro\uFuncoes.pas=D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas</Transaction>
+    <Transaction>2025/01/28 22:29:07.000.905,=D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas</Transaction>
+    <Transaction>2025/01/28 22:29:25.000.226,D:\Projetos_Pedro\Teste\Cadastro\ufrmCadCidades.pas=D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas</Transaction>
+    <Transaction>2025/01/28 22:29:25.000.226,D:\Projetos_Pedro\Teste\Cadastro\ufrmCadCidades.dfm=D:\Projetos_Pedro\Teste\Cadastro\Unit1.dfm</Transaction>
+    <Transaction>2025/01/28 22:29:57.000.323,D:\Projetos_Pedro\Teste\Cadastro\ufrmCadCidades.pas=</Transaction>
+    <Transaction>2025/01/28 23:46:39.000.570,=D:\Projetos_Pedro\Teste\Cadastro\uClientes.pas</Transaction>
+    <Transaction>2025/01/29 07:47:12.000.448,=D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas</Transaction>
+    <Transaction>2025/01/29 07:47:46.000.553,D:\Projetos_Pedro\Teste\Cadastro\Unit1.dfm=D:\Projetos_Pedro\Teste\Cadastro\uPesquisaCidades.dfm</Transaction>
+    <Transaction>2025/01/29 07:47:46.000.553,D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas=D:\Projetos_Pedro\Teste\Cadastro\uPesquisaCidades.pas</Transaction>
+    <Transaction>2025/01/29 20:38:14.131,=D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas</Transaction>
+    <Transaction>2025/01/29 20:38:54.921,D:\Projetos_Pedro\Teste\Cadastro\uRelCidades.dfm=D:\Projetos_Pedro\Teste\Cadastro\Unit1.dfm</Transaction>
+    <Transaction>2025/01/29 20:38:54.921,D:\Projetos_Pedro\Teste\Cadastro\uRelCidades.pas=D:\Projetos_Pedro\Teste\Cadastro\Unit1.pas</Transaction>
+    <Transaction>2025/01/29 21:45:50.008,=D:\Projetos_Pedro\Teste\Cadastro\uRelClientes.pas</Transaction>
+    <Transaction>2025/01/29 22:03:27.920,=D:\Projetos_Pedro\Teste\Cadastro\uPesquisaClientes.pas</Transaction>
+  </Transactions>
+</BorlandProject>
